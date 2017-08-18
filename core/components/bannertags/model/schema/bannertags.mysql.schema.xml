@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="bannertags" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" phpdoc-package="bannertags"
+       version="1.1">
+
+    <object class="tagsBanner" table="tags_banner" extends="xPDOSimpleObject">
+        <field key="category_id" dbtype="int" precision="10" phptype="integer" null="false" />
+        <field key="image" dbtype="varchar" precision="255" phptype="string" null="false" default=""/>
+        <field key="name" dbtype="varchar" precision="255" phptype="string" null="false" default=""/>
+        <field key="description" dbtype="text" phptype="text" null="true" default=""/>
+        <field key="active" dbtype="tinyint" precision="1" phptype="boolean" null="true" default="1"/>
+
+        <index alias="name" name="name" primary="false" unique="false" type="BTREE">
+            <column key="name" length="" collation="A" null="false"/>
+        </index>
+        <index alias="active" name="active" primary="false" unique="false" type="BTREE">
+            <column key="active" length="" collation="A" null="false"/>
+        </index>
+
+        <composite alias="tagsItem" class="tagsItem" local="id" foreign="banner_id" cardinality="many"
+                   owner="local"/>
+
+        <aggregate alias="Category" class="msCategory" local="category_id" foreign="id" cardinality="one" owner="foreign"/>
+
+    </object>
+
+
+    <object class="tagsItem" table="tags_item" extends="xPDOSimpleObject">
+        <field key="banner_id" dbtype="int" precision="10" phptype="integer" null="false" />
+        <field key="name" dbtype="varchar" precision="255" phptype="string" null="false" default=""/>
+        <field key="product_id" dbtype="int" precision="10" phptype="integer" null="false" />
+
+        <aggregate alias="tagsBanner" class="tagsBanner" local="banner_id" foreign="id" cardinality="one" owner="foreign"/>
+
+    </object>
+</model>
