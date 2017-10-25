@@ -5,10 +5,10 @@
 $snippets = array();
 
 $tmp = array(
-    /*'bannertags' => array(
+    'bannertags' => array(
         'file' => 'bannertags',
         'description' => '',
-    ),*/
+    ),
 );
 
 foreach ($tmp as $k => $v) {

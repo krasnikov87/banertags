@@ -28,6 +28,8 @@
         <field key="banner_id" dbtype="int" precision="10" phptype="integer" null="false" />
         <field key="name" dbtype="varchar" precision="255" phptype="string" null="false" default=""/>
         <field key="product_id" dbtype="int" precision="10" phptype="integer" null="false" />
+        <field key="pos_left" dbtype="int" precision="5" phptype="integer" null="false"/>
+        <field key="pos_top" dbtype="int" precision="5" phptype="integer" null="false"/>
 
         <aggregate alias="tagsBanner" class="tagsBanner" local="banner_id" foreign="id" cardinality="one" owner="foreign"/>
 

@@ -5,11 +5,11 @@
 $menus = array();
 
 $tmp = array(
-    /*'bannertags' => array(
-        'description' => 'bannertags_menu_desc',
+    'bannertags' => array(
+        //'description' => 'bannertags_menu_desc',
         'action' => 'home',
         //'icon' => '<i class="icon icon-large icon-modx"></i>',
-    ),*/
+    ),
 );
 
 foreach ($tmp as $k => $v) {

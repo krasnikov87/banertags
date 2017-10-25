@@ -9,6 +9,8 @@ $xpdo_meta_map['tagsItem']= array (
     'banner_id' => NULL,
     'name' => '',
     'product_id' => NULL,
+    'pos_left' => NULL,
+    'pos_top' => NULL,
   ),
   'fieldMeta' => 
   array (
@@ -31,6 +33,20 @@ $xpdo_meta_map['tagsItem']= array (
     array (
       'dbtype' => 'int',
       'precision' => '10',
+      'phptype' => 'integer',
+      'null' => false,
+    ),
+    'pos_left' => 
+    array (
+      'dbtype' => 'int',
+      'precision' => '5',
+      'phptype' => 'integer',
+      'null' => false,
+    ),
+    'pos_top' => 
+    array (
+      'dbtype' => 'int',
+      'precision' => '5',
       'phptype' => 'integer',
       'null' => false,
     ),

@@ -1,0 +1,57 @@
+/* Grid */
+.bannertags-grid-row-disabled { font-style: italic; opacity: .6; color: #555; }
+.x-grid3-col-actions { padding: 3px 0 3px 5px; }
+/* Actions */
+.action-red { color: darkred !important; }
+.action-green { color: darkgreen !important; }
+.action-blue { color: cadetblue !important; }
+.action-yellow { color: goldenrod !important; }
+.action-gray { color: dimgray !important; }
+ul.bannertags-row-actions { margin: 0; padding: 0; list-style: none; }
+ul.bannertags-row-actions li { float: left; }
+ul.bannertags-row-actions .btn { padding: 5px; margin-right: 2px; min-width: 26px; font-size: inherit; }
+/* Action menu */
+a.x-menu-item .x-menu-item-text, a.x-menu-item .x-menu-item-text .icon { cursor: pointer; }
+a.x-menu-item .x-menu-item-text .icon { line-height: 16px; top: auto; }
+.x-menu-list .icon { min-width: 1em; text-align: center; }
+.x-menu-list-item:hover .icon { color: inherit !important; }
+ul.bannertags-row-actions .actions-menu { width: 40px; }
+ul.bannertags-row-actions .actions-menu:after { content: " \f107"; }
+
+.image{
+    position: relative;
+}
+.tag{
+    width: 141px;
+    height: auto;
+    box-sizing: border-box;
+    padding: 5px 9px;
+    background: rgba(0,0,0,.4);
+    font: 8.33px CopperplateGothic-Light;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+    vertical-align: baseline;
+}
+.tag p{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+.tag:before{
+    content: url(../../img/catalog-price-ico.png);
+    position: absolute;
+    top: -13px;
+    left: -38px;
+}
